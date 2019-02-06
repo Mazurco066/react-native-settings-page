@@ -1,8 +1,5 @@
 // Dependencies import
-import { 
-    AppRegistry,
-    NativeModules 
-} from 'react-native'
+import { AppRegistry } from 'react-native'
 
 // Components import
 import ReactNativeSettingsPage, {
@@ -12,15 +9,6 @@ import ReactNativeSettingsPage, {
     CheckRow
 } from './src/Pages/ReactNativeSettingsPage'
 
-// Lib recover
-const { RNSettingsPage } = NativeModules
-
-// Lib export
-export default RNSettingsPage
-
-// Lib component register
-AppRegistry.registerComponent('ReactNativeSettingsPage', () => ReactNativeSettingsPage)
-AppRegistry.registerComponent('SectionRow', () => SectionRow)
-AppRegistry.registerComponent('NavigateRow', () => NavigateRow)
-AppRegistry.registerComponent('SwitchRow', () => SwitchRow)
-AppRegistry.registerComponent('CheckRow', () => CheckRow)
+// Library exports
+export default ReactNativeSettingsPage
+export { SectionRow, NavigateRow, SwitchRow, CheckRow }
