@@ -1,6 +1,12 @@
 
 # react-native-settings-page
 
+#### Version 2.0.0
+
+Sample Image 01         |  Sample Image 02
+:-------------------------:|:-------------------------:
+![](https://raw.githubusercontent.com/Mazurco066/ImagesSource/master/sample1.png)  |  ![](https://raw.githubusercontent.com/Mazurco066/ImagesSource/master/sample2.png)
+
 This is a cool Settings page based on Material Design
 
 ## Getting started
@@ -14,9 +20,9 @@ This is a cool Settings page based on Material Design
 * **Gabriel Mazurco Ribeiro (Mazurco066)**
 * **Lucas Ferraz (LucasFsc)**
 
-## Props
+### Props
 
-### type
+#### types
 
 _text_: use the text prop to display in Row
 
