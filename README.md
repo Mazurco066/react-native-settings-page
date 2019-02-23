@@ -1,45 +1,90 @@
 
 # react-native-settings-page
 
+This is a cool Settings page based on Material Design
+
 ## Getting started
 
 `$ npm install react-native-settings-page --save`
+`$ yarn add react-native-settings-page`
 
-### Mostly automatic installation
+## Developer
 
-`$ react-native link react-native-settings-page`
+* **Gabriel Mazurco Ribeiro (Mazurco066)**
 
-### Manual installation
+## Props
 
+### type
 
-#### iOS
+_text_: use the text prop to display in Row
+_iconName_: use the icon name to display a icon on the row, the source from icons is **FontAwesome**
 
-1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-settings-page` and add `RNSettingsPage.xcodeproj`
-3. In XCode, in the project navigator, select your project. Add `libRNSettingsPage.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
-4. Run your project (`Cmd+R`)<
+#### NavigateRow exclusive types and methods
 
-#### Android
+_onPressCallback_: use this to implement your onPress method
 
-1. Open up `android/app/src/main/java/[...]/MainActivity.java`
-  - Add `import io.github.mazurco066.RNSettingsPagePackage;` to the imports at the top of the file
-  - Add `new RNSettingsPagePackage()` to the list returned by the `getPackages()` method
-2. Append the following lines to `android/settings.gradle`:
-  	```
-  	include ':react-native-settings-page'
-  	project(':react-native-settings-page').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-settings-page/android')
-  	```
-3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-  	```
-      compile project(':react-native-settings-page')
-  	```
+```jsx
+<NavigateRow
+  text='Navigate Row'
+  iconName={'your-icon-name'}
+	onPressCallback={() => { console.log('onPress') }} />
+```
 
+#### SwitchRow exclusive types and methods
+
+_value_: use _value to controll if the switch will be switched on or off
+
+```jsx
+<SwitchRow 
+	text='Switch Row' 
+	iconName='your-icon-name'
+	_value={false} />
+```
 
 ## Usage
-```javascript
-import RNSettingsPage from 'react-native-settings-page';
 
-// TODO: What to do with the module?
-RNSettingsPage;
+Below is a sample usage of this pakage
+
+```jsx
+import React from 'react';
+import ReactNativeSettingsPage, { 
+	SectionRow, 
+	NavigateRow 
+} from 'react-native-settings-page';
+
+class Settings extends React.Component {
+	// TODO: iplement your navigationOptions
+	_navigateToScreen = () {
+		const { navigation } = this.props
+		navigation.navigate('Your-Screen-Name');
+	}
+	render() {
+		return (
+			<ReactNativeSettingsPage>
+
+				<SectionRow text='Usage'>
+
+          <NavigateRow
+            text='Navigate Row'
+            iconName={'your-icon-name'}
+						 onPressCallback={this._navigateToScreen} />
+						 
+					<SwitchRow 
+						text='Switch Row' 
+						iconName='your-icon-name'
+						_value={false} />
+
+				</SectionRow>
+				
+			</ReactNativeSettingsPage>
+		)
+	}
+}
+
+export default Settings
 ```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
   
