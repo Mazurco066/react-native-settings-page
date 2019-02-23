@@ -1,14 +1,10 @@
-// Dependencies import
-import { AppRegistry } from 'react-native'
-
 // Components import
 import ReactNativeSettingsPage, {
     SectionRow,
     NavigateRow,
-    SwitchRow,
-    CheckRow
+    SwitchRow
 } from './src/Pages/ReactNativeSettingsPage'
 
 // Library exports
 export default ReactNativeSettingsPage
-export { SectionRow, NavigateRow, SwitchRow, CheckRow }
+export { SectionRow, NavigateRow, SwitchRow }
