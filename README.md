@@ -6,9 +6,10 @@ This is a cool Settings page based on Material Design
 ## Getting started
 
 `$ npm install react-native-settings-page --save`
+
 `$ yarn add react-native-settings-page`
 
-## Developer
+### Developer
 
 * **Gabriel Mazurco Ribeiro (Mazurco066)**
 
@@ -17,6 +18,7 @@ This is a cool Settings page based on Material Design
 ### type
 
 _text_: use the text prop to display in Row
+
 _iconName_: use the icon name to display a icon on the row, the source from icons is **FontAwesome**
 
 #### NavigateRow exclusive types and methods
@@ -41,7 +43,7 @@ _value_: use _value to controll if the switch will be switched on or off
 	_value={false} />
 ```
 
-## Usage
+### Usage
 
 Below is a sample usage of this pakage
 
@@ -61,21 +63,16 @@ class Settings extends React.Component {
 	render() {
 		return (
 			<ReactNativeSettingsPage>
-
 				<SectionRow text='Usage'>
-
           <NavigateRow
             text='Navigate Row'
             iconName={'your-icon-name'}
 						 onPressCallback={this._navigateToScreen} />
-						 
 					<SwitchRow 
 						text='Switch Row' 
 						iconName='your-icon-name'
 						_value={false} />
-
 				</SectionRow>
-				
 			</ReactNativeSettingsPage>
 		)
 	}
@@ -84,7 +81,7 @@ class Settings extends React.Component {
 export default Settings
 ```
 
-## License
+### License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
   
