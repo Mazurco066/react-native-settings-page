@@ -12,6 +12,7 @@ This is a cool Settings page based on Material Design
 ### Developer
 
 * **Gabriel Mazurco Ribeiro (Mazurco066)**
+* **Lucas Ferraz (LucasFsc)**
 
 ## Props
 
