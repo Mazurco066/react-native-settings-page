@@ -17,8 +17,8 @@ This is a cool Settings page based on Material Design
 
 ### Developer
 
-* **Gabriel Mazurco Ribeiro (Mazurco066)**
-* **Lucas Ferraz (LucasFsc)**
+* **Gabriel Mazurco Ribeiro** - [Mazurco066](https://github.com/Mazurco066)
+* **Lucas Ferraz (LucasFsc)** - [LucasFsc](https://github.com/LucasFsc)
 
 ### Props
 
@@ -34,8 +34,8 @@ _onPressCallback_: use this to implement your onPress method
 
 ```jsx
 <NavigateRow
-  text='Navigate Row'
-  iconName={'your-icon-name'}
+  	text='Navigate Row'
+  	iconName={'your-icon-name'}
 	onPressCallback={() => { console.log('onPress') }} />
 ```
 
@@ -71,10 +71,10 @@ class Settings extends React.Component {
 		return (
 			<ReactNativeSettingsPage>
 				<SectionRow text='Usage'>
-          <NavigateRow
-            text='Navigate Row'
-            iconName={'your-icon-name'}
-						 onPressCallback={this._navigateToScreen} />
+          			<NavigateRow
+            			text='Navigate Row'
+            			iconName={'your-icon-name'}
+						onPressCallback={this._navigateToScreen} />
 					<SwitchRow 
 						text='Switch Row' 
 						iconName='your-icon-name'
