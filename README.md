@@ -80,7 +80,8 @@ Below is a sample usage of this package
 import React from 'react';
 import ReactNativeSettingsPage, { 
 	SectionRow, 
-	NavigateRow 
+	NavigateRow,
+	CheckRow
 } from 'react-native-settings-page';
 
 class Settings extends React.Component {
@@ -97,9 +98,9 @@ class Settings extends React.Component {
 		return (
 			<ReactNativeSettingsPage>
 				<SectionRow text='Usage'>
-          			<NavigateRow
-            			text='Navigate Row'
-            			iconName={'your-icon-name'}
+					<NavigateRow
+						text='Navigate Row'
+						iconName='your-icon-name'
 						onPressCallback={this._navigateToScreen} />
 					<SwitchRow 
 						text='Switch Row' 
