@@ -1,6 +1,6 @@
 {
   "name": "react-native-settings-page",
-  "version": "2.0.0",
+  "version": "2.0.5",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "react": "^16.7.0",
-    "react-native-material-kit": "^0.5.1",
+    "react-native-elements": "^1.0.0",
     "react-native-vector-icons": "^6.2.0"
   }
 }

@@ -1,7 +1,7 @@
 
 # react-native-settings-page
 
-#### Version 2.0.0
+#### Version 2.0.5
 
 Sample Image 01         |  Sample Image 02
 :-------------------------:|:-------------------------:
@@ -18,7 +18,7 @@ This is a cool Settings page based on Material Design
 ### Developer
 
 * **Gabriel Mazurco Ribeiro** - [Mazurco066](https://github.com/Mazurco066)
-* **Lucas Ferraz (LucasFsc)** - [LucasFsc](https://github.com/LucasFsc)
+* **Lucas Ferraz** - [LucasFsc](https://github.com/LucasFsc)
 
 ### Props
 
@@ -43,16 +43,38 @@ _onPressCallback_: use this to implement your onPress method
 
 _value_: use _value to controll if the switch will be switched on or off
 
+_onValueChange_: use _onValueChange to implemente the switch action
+
 ```jsx
 <SwitchRow 
 	text='Switch Row' 
 	iconName='your-icon-name'
-	_value={false} />
+	onPressCallback={() => { console.log('on Body Press (optional)') }}
+	_value={false}
+	_onValueChange={() => { console.log('switched') }} />
+```
+
+#### CheckRow exclusive types and methods
+
+_value_: use _value to controll if the checkbox will be switched on or off
+
+_color_: use _color to define the checkbox active color
+
+_onValueChange_: use _onValueChange to implemente the check action
+
+```jsx
+<CheckRow 
+	text='Switch Row' 
+	iconName='your-icon-name'
+	onPressCallback={() => { console.log('on Body Press (optional)') }}
+	_color='#000'
+	_value={false}
+	_onValueChange={() => { console.log('checked/unchecked') }} />
 ```
 
 ### Usage
 
-Below is a sample usage of this pakage
+Below is a sample usage of this package
 
 ```jsx
 import React from 'react';
@@ -62,7 +84,11 @@ import ReactNativeSettingsPage, {
 } from 'react-native-settings-page';
 
 class Settings extends React.Component {
-	// TODO: iplement your navigationOptions
+	// TODO: implement your navigationOptions
+	state = {
+		check: false,
+		switch: false
+	}
 	_navigateToScreen = () {
 		const { navigation } = this.props
 		navigation.navigate('Your-Screen-Name');
@@ -78,7 +104,14 @@ class Settings extends React.Component {
 					<SwitchRow 
 						text='Switch Row' 
 						iconName='your-icon-name'
-						_value={false} />
+						_value={this.state.switch}
+						_onValueChange={() => { this.setState({ switch: !this.state.switch }) }} />
+					<CheckRow 
+						text='Check Row'
+						iconName='your-icon-name'
+						_color='#000'
+						_value={this.state.check}
+						_onValueChange={() => { this.setState({ check: !this.state.check }) }} />
 				</SectionRow>
 			</ReactNativeSettingsPage>
 		)

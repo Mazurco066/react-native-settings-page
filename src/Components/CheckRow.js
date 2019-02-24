@@ -1,7 +1,7 @@
 // Dependencies import
 import React, { Component } from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
-import { MKCheckbox } from 'react-native-material-kit'
+import { CheckBox } from 'react-native-elements'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import SettingsRowStyle from '../Styles/SettingsRowStyle'
 
@@ -25,10 +25,13 @@ class CheckRow extends Component {
                         <Text style={text} numberOfLines={1} ellipsizeMode={'tail'}>
                             {this.props.text}
                         </Text>
-                        <MKCheckbox
+                        <CheckBox
                             style={checkSt}
-                            checked={this.props.checked}
-                            onCheckedChange={this.props._onCheckedChange} />
+                            checkedIcon='dot-circle-o'
+                            uncheckedIcon='circle-o'
+                            checkedColor={this.props._color ? this.props._color : '#90caf9'}
+                            checked={this.props._value}
+                            onPress={this.props._onValueChange} />
                     </View>
                 </View>
             </TouchableOpacity>
