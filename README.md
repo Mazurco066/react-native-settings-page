@@ -5,7 +5,7 @@
 
 Sample Image 01         |  Sample Image 02
 :-------------------------:|:-------------------------:
-![](https://raw.githubusercontent.com/Mazurco066/ImagesSource/master/sample1.png)  |  ![](https://raw.githubusercontent.com/Mazurco066/ImagesSource/master/sample2.png)
+![](https://raw.githubusercontent.com/Mazurco066/ImagesSource/master/sample3.png)  |  ![](https://raw.githubusercontent.com/Mazurco066/ImagesSource/master/sample2.png)
 
 This is a cool Settings page based on Material Design
 
