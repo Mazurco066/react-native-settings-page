@@ -1,7 +1,7 @@
 
 # react-native-settings-page
 
-#### Version 2.0.5
+#### Version 2.0.6
 
 Sample Image 01         |  Sample Image 02
 :-------------------------:|:-------------------------:
@@ -72,6 +72,33 @@ _onValueChange_: use _onValueChange to implemente the check action
 	_onValueChange={() => { console.log('checked/unchecked') }} />
 ```
 
+#### SliderRow exclusive types and methods
+
+_navigate_: use navigate to define if the slider row will show the angle-right icon
+
+_value_: use _value to define slider's progress
+
+_color_: use _color to define the slider active color
+
+_min_: use _max to define slider's min progress
+
+_max_: use _max to define slider's max progress
+
+_onValueChange_: use _onValueChange to implemente the onValueChange action
+
+```jsx
+<SliderRow 
+	navigate
+	text='Slider Row' 
+	iconName='your-icon-name'
+	onPressCallback={() => { console.log('on Body Press (optional)') }}
+	_color='#000'
+	_value={70}
+	_min={0}
+	_max={100}
+	_onValueChange={value => { console.log('value: ' + value) }} />
+```
+
 ### Usage
 
 Below is a sample usage of this package
@@ -88,7 +115,8 @@ class Settings extends React.Component {
 	// TODO: implement your navigationOptions
 	state = {
 		check: false,
-		switch: false
+		switch: false,
+		value: 40
 	}
 	_navigateToScreen = () {
 		const { navigation } = this.props
@@ -113,6 +141,14 @@ class Settings extends React.Component {
 						_color='#000'
 						_value={this.state.check}
 						_onValueChange={() => { this.setState({ check: !this.state.check }) }} />
+					<SliderRow 
+						text='Slider Row'
+						iconName='your-icon-name'
+						_color='#000'
+						_min={0}
+						_max={100}
+						_value={this.state.value}
+						_onValueChange={value => { this.setState({ value }) }} />
 				</SectionRow>
 			</ReactNativeSettingsPage>
 		)

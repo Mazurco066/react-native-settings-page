@@ -3,9 +3,10 @@ import ReactNativeSettingsPage, {
     SectionRow,
     NavigateRow,
     SwitchRow,
-    CheckRow
+    CheckRow,
+    SliderRow
 } from './src/Pages/ReactNativeSettingsPage'
 
 // Library exports
 export default ReactNativeSettingsPage
-export { SectionRow, NavigateRow, SwitchRow, CheckRow }
+export { SectionRow, NavigateRow, SwitchRow, CheckRow, SliderRow }

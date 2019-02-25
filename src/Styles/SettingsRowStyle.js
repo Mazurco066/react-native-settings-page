@@ -65,6 +65,9 @@ const SettingsRowStyle = StyleSheet.create({
     },
     checkSt: {
         flex: 1
+    },
+    sliderSt: {
+        marginHorizontal: 16
     }
 })
 
