@@ -15,6 +15,8 @@ This is a cool Settings page based on Material Design
 
 `$ yarn add react-native-settings-page`
 
+`$ react-native link react-native-vector-icons`
+
 ### Developer
 
 * **Gabriel Mazurco Ribeiro** - [Mazurco066](https://github.com/Mazurco066)
