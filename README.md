@@ -118,7 +118,7 @@ class Settings extends React.Component {
 		switch: false,
 		value: 40
 	}
-	_navigateToScreen = () {
+	_navigateToScreen = () => {
 		const { navigation } = this.props
 		navigation.navigate('Your-Screen-Name');
 	}

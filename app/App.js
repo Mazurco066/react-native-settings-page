@@ -1,49 +1,64 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
+import React, { Component } from "react";
+import ReactNativeSettingsPage, {
+  NavigateRow,
+  SectionRow,
+  SwitchRow,
+  CheckRow,
+  SliderRow
+} from "react-native-settings-page";
 
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
-
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {
+  // TODO: implement your navigationOptions
+  state = {
+    check: false,
+    switch: false,
+    value: 40
+  };
+  _navigateToScreen = () => {
+    const { navigation } = this.props;
+    //navigation.navigate('Your-Screen-Name');
+  };
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-      </View>
+      <ReactNativeSettingsPage>
+        <SectionRow text="Usage">
+          <NavigateRow
+            text="Navigate Row"
+            iconName="user-circle"
+            onPressCallback={this._navigateToScreen}
+          />
+          <SwitchRow
+            text="Switch Row"
+            iconName="road"
+            _value={this.state.switch}
+            _onValueChange={() => {
+              this.setState({ switch: !this.state.switch });
+            }}
+          />
+        </SectionRow>
+        <SectionRow text="Notifications">
+          <CheckRow
+            text="Check Row"
+            iconName="bell"
+            _color="#000"
+            _value={this.state.check}
+            _onValueChange={() => {
+              this.setState({ check: !this.state.check });
+            }}
+          />
+          <SliderRow
+            text="Slider Row"
+            iconName="archive"
+            _color="#000"
+            _min={0}
+            _max={100}
+            _value={this.state.value}
+            _onValueChange={value => {
+              this.setState({ value });
+            }}
+          />
+        </SectionRow>
+      </ReactNativeSettingsPage>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
