@@ -5,7 +5,7 @@ import SettingsStyle from '../Styles/SettingsStyle'
 
 // Library main view definition
 const ReactNativeSettingsPage = props => (
-    <ScrollView style={ SettingsStyle.container }>
+    <ScrollView style={ SettingsStyle.container } showsVerticalScrollIndicator={ props.showsVerticalScrollIndicator }>
         <View style={ SettingsStyle.content }>
             {props.children}
         </View>     
