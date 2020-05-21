@@ -1,5 +1,5 @@
 
-# react-native-settings-page
+# This package is DEPRECATED and its not maintained anymore.
 
 #### Version 2.0.6
 
