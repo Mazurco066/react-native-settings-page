@@ -22,7 +22,7 @@ class SliderRow extends Component {
             <TouchableOpacity onPress={this.props.onPressCallback}>
                 <View style={containerInSection}>
                     <View style={containerInnerSection}>
-                        <Icon name={this.props.iconName} size={24} style={iconLeft} />
+                        <Icon name={this.props.iconName} size={24} style={iconLeft} color={this.props.iconColor} />
                         <Text style={text} numberOfLines={1} ellipsizeMode={'tail'}>
                             {this.props.text}
                         </Text> 
